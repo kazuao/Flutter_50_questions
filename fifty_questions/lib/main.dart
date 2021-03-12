@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '1/FirstQuestion.dart';
 import '2/SecondQuestion.dart';
 import '3/ThirdQuestion.dart';
+import '6/SixthQuestion.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,6 +34,7 @@ class BodyApp extends StatelessWidget {
             raisedButtonType(context, 'Primitive型', FirstQuestion()),
             raisedButtonType(context, 'Collection型', SecondQuestion()),
             raisedButtonType(context, 'Conditional Branch型', ThirdQuestion()),
+            raisedButtonType(context, 'Asset Images', SixthQuestion()),
           ],
         ),
       ),
