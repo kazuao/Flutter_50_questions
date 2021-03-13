@@ -4,6 +4,8 @@ import '1/FirstQuestion.dart';
 import '2/SecondQuestion.dart';
 import '3/ThirdQuestion.dart';
 import '6/SixthQuestion.dart';
+import 'Alert/alert_dialog.dart';
+import 'WebView/web_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -35,6 +37,8 @@ class BodyApp extends StatelessWidget {
             raisedButtonType(context, 'Collection型', SecondQuestion()),
             raisedButtonType(context, 'Conditional Branch型', ThirdQuestion()),
             raisedButtonType(context, 'Asset Images', SixthQuestion()),
+            raisedButtonType(context, 'Alert Dialog', ShowAlertDialog()),
+            raisedButtonType(context, 'Web View', ShowWebView()),
           ],
         ),
       ),
@@ -43,7 +47,12 @@ class BodyApp extends StatelessWidget {
 
   RaisedButton raisedButtonType(context, text, nextClass) {
     return RaisedButton(
-      child: Text(text),
+      child: Text(
+        text,
+        style: TextStyle(
+          color: Colors.white,
+        ),
+      ),
       color: Colors.orange,
       onPressed: () {
         Navigator.push(
