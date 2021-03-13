@@ -31,7 +31,7 @@ class ThirdQuestion extends StatelessWidget {
   }
 
   String sampleTernaryOperator({String hoge = ''}) {
-    var answer = !hoge.isEmpty ? hoge : 'からです';
+    var answer = hoge.isNotEmpty ? hoge : 'からです';
     return answer;
   }
 

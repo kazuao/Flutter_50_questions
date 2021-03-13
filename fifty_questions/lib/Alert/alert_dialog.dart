@@ -8,9 +8,11 @@ class ShowAlertDialog extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            RaisedButton(
+            ElevatedButton(
               child: const Text('Show Dialog'),
-              color: Colors.green,
+              style: ElevatedButton.styleFrom(
+                primary: Colors.green,
+              ),
               onPressed: () {
                 showDialog(
                   context: context,
@@ -33,9 +35,11 @@ class ShowAlertDialog extends StatelessWidget {
                 );
               },
             ),
-            RaisedButton(
+            ElevatedButton(
               child: const Text('Show Button Dialog'),
-              color: Colors.blue,
+              style: ElevatedButton.styleFrom(
+                primary: Colors.blue,
+              ),
               onPressed: () {
                 showDialog(
                   context: context,
@@ -44,11 +48,11 @@ class ShowAlertDialog extends StatelessWidget {
                       title: const Text('タイトル'),
                       content: const Text('本文本文本文本文本文本文本文本文本文本文本文本文'),
                       actions: [
-                        FlatButton(
+                        TextButton(
                           onPressed: () => Navigator.pop(context),
                           child: const Text('cancel'),
                         ),
-                        FlatButton(
+                        TextButton(
                           onPressed: () => Navigator.pop(context),
                           child: const Text('ok'),
                         ),

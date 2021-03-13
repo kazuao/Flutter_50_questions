@@ -6,6 +6,7 @@ import '3/ThirdQuestion.dart';
 import '6/SixthQuestion.dart';
 import 'Alert/alert_dialog.dart';
 import 'WebView/web_view.dart';
+import 'TextField/text_field.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,27 +34,30 @@ class BodyApp extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            raisedButtonType(context, 'Primitive型', FirstQuestion()),
-            raisedButtonType(context, 'Collection型', SecondQuestion()),
-            raisedButtonType(context, 'Conditional Branch型', ThirdQuestion()),
-            raisedButtonType(context, 'Asset Images', SixthQuestion()),
-            raisedButtonType(context, 'Alert Dialog', ShowAlertDialog()),
-            raisedButtonType(context, 'Web View', ShowWebView()),
+            elevatedButtonType(context, 'Primitive型', FirstQuestion()),
+            elevatedButtonType(context, 'Collection型', SecondQuestion()),
+            elevatedButtonType(context, 'Conditional Branch型', ThirdQuestion()),
+            elevatedButtonType(context, 'Asset Images', SixthQuestion()),
+            elevatedButtonType(context, 'Alert Dialog', ShowAlertDialog()),
+            elevatedButtonType(context, 'Web View', WebViewExample()),
+            elevatedButtonType(context, 'Sample Text Field', SampleTextField()),
           ],
         ),
       ),
     );
   }
 
-  RaisedButton raisedButtonType(context, text, nextClass) {
-    return RaisedButton(
+  ElevatedButton elevatedButtonType(context, text, nextClass) {
+    return ElevatedButton(
       child: Text(
         text,
         style: TextStyle(
           color: Colors.white,
         ),
       ),
-      color: Colors.orange,
+      style: ElevatedButton.styleFrom(
+        primary: Colors.orange,
+      ),
       onPressed: () {
         Navigator.push(
           context,
