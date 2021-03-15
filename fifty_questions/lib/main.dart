@@ -8,7 +8,9 @@ import 'Alert/alert_dialog.dart';
 import 'WebView/web_view.dart';
 import 'TextField/text_field.dart';
 import 'DropDownAndPopup/dropdown_popup.dart';
-import 'SampleDateAndTimePickers/date_and_time_pickers.dart';
+import 'DateAndTimePickers/date_and_time_pickers.dart';
+import 'ListView/list_view.dart';
+import 'FloatingListView/floating_list_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -42,11 +44,14 @@ class BodyApp extends StatelessWidget {
             elevatedButtonType(context, 'Asset Images', SixthQuestion()),
             elevatedButtonType(context, 'Alert Dialog', ShowAlertDialog()),
             elevatedButtonType(context, 'Web View', WebViewExample()),
-            elevatedButtonType(context, 'Sample Text Field', SampleTextField()),
+            elevatedButtonType(context, 'Text Field', SampleTextField()),
             elevatedButtonType(
-                context, 'Sample Dropdown And Popup', SampleDropdownAndPopup()),
+                context, 'Dropdown And Popup', SampleDropdownAndPopup()),
             elevatedButtonType(
                 context, 'Date And Time Pickers', SampleDateAndTimePickers()),
+            elevatedButtonType(context, 'ListView', SampleListView()),
+            elevatedButtonType(
+                context, 'Floating List View', SampleFloatingListView()),
           ],
         ),
       ),
