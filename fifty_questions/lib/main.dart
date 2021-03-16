@@ -15,6 +15,7 @@ import 'CardView/card_view.dart';
 import 'StepperView/stepper_view.dart';
 import 'SnackBarView/snack_bar_view.dart';
 import 'TabBarView/tab_bar_view.dart';
+import 'BottomNavigation/bottom_navigation.dart';
 
 void main() {
   runApp(MyApp());
@@ -65,6 +66,8 @@ class BodyApp extends StatelessWidget {
               elevatedButtonType(context, 'Stepper View', SampleStepperView()),
               elevatedButtonType(context, 'Snack Bar', SampleSnackBar()),
               elevatedButtonType(context, 'Tab Bar', SampleTabBarView()),
+              elevatedButtonType(
+                  context, 'Bottom Navigation', SampleBottomNavigation()),
             ],
           ),
         ),
