@@ -11,6 +11,10 @@ import 'DropDownAndPopup/dropdown_popup.dart';
 import 'DateAndTimePickers/date_and_time_pickers.dart';
 import 'ListView/list_view.dart';
 import 'FloatingListView/floating_list_view.dart';
+import 'CardView/card_view.dart';
+import 'StepperView/stepper_view.dart';
+import 'SnackBarView/snack_bar_view.dart';
+import 'TabBarView/tab_bar_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -35,24 +39,34 @@ class BodyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('50 Questions')),
-      body: Center(
-        child: Column(
-          children: [
-            elevatedButtonType(context, 'Primitive型', FirstQuestion()),
-            elevatedButtonType(context, 'Collection型', SecondQuestion()),
-            elevatedButtonType(context, 'Conditional Branch型', ThirdQuestion()),
-            elevatedButtonType(context, 'Asset Images', SixthQuestion()),
-            elevatedButtonType(context, 'Alert Dialog', ShowAlertDialog()),
-            elevatedButtonType(context, 'Web View', WebViewExample()),
-            elevatedButtonType(context, 'Text Field', SampleTextField()),
-            elevatedButtonType(
-                context, 'Dropdown And Popup', SampleDropdownAndPopup()),
-            elevatedButtonType(
-                context, 'Date And Time Pickers', SampleDateAndTimePickers()),
-            elevatedButtonType(context, 'ListView', SampleListView()),
-            elevatedButtonType(
-                context, 'Floating List View', SampleFloatingListView()),
-          ],
+      drawer: Drawer(),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(32.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              elevatedButtonType(context, 'Primitive型', FirstQuestion()),
+              elevatedButtonType(context, 'Collection型', SecondQuestion()),
+              elevatedButtonType(
+                  context, 'Conditional Branch型', ThirdQuestion()),
+              elevatedButtonType(context, 'Asset Images', SixthQuestion()),
+              elevatedButtonType(context, 'Alert Dialog', ShowAlertDialog()),
+              elevatedButtonType(context, 'Web View', WebViewExample()),
+              elevatedButtonType(context, 'Text Field', SampleTextField()),
+              elevatedButtonType(
+                  context, 'Dropdown And Popup', SampleDropdownAndPopup()),
+              elevatedButtonType(
+                  context, 'Date And Time Pickers', SampleDateAndTimePickers()),
+              elevatedButtonType(context, 'ListView', SampleListView()),
+              elevatedButtonType(
+                  context, 'Floating List View', SampleFloatingListView()),
+              elevatedButtonType(context, 'Card View', SampleCardView()),
+              elevatedButtonType(context, 'Stepper View', SampleStepperView()),
+              elevatedButtonType(context, 'Snack Bar', SampleSnackBar()),
+              elevatedButtonType(context, 'Tab Bar', SampleTabBarView()),
+            ],
+          ),
         ),
       ),
     );
